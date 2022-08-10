@@ -3,29 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <header>
-      <p class="logo">Welcome</p>
+      <!-- <p class="logo">Welcome</p> -->
       <nav id="navbar">
           <ul class="nav_links">
-              <li><a href="#">About me</a></li>
-              <li><a href="#">Projects</a></li>
+              <li><a href="#welcome-section">Home</a></li>
+              <li><a href="#aboutme">About me</a></li>
+              <li><a href="#projects">Projects</a></li>
               <li><a href="#">Contact</a></li>
           </ul>
       </nav>
     </header>
+    <main>
     <section id="welcome-section">
-        <h1>Welcome</h1>
+        <div class="hello-div">
+          <h1 class="welcome-title">Hi, I'm Alexander</h1>
+          <h1 class="welcome-title-two">Junior frontend developer</h1>
+        </div>
+    </section>
+    <section id="aboutme">
+      <div class="aboutme-div">
+        <h2>About me:</h2>
+        <p>
+          Hello, my name is Alexander. I am 34 years old and I am from Russia.<br>
+          I am looking for a Junior Front End Developer position.<br>
+          <br>
+          <span class="bold-text">My background:</span><br>
+          <br>
+          For the last 10 years I have worked in the field of construction in the largest Russian companies such as oil and gas company, Russian railway company.
+          For the last 4 years I have been leading a team of several people that are preparing permits for construction.
+          My work is related to the processing of a large amount of technical, design and legislative documentation.<br>
+          <br>
+          I can quickly find the information I need in large amounts of data.
+          I know how to plan and organize the work of a team. Resolve conflicts in the team, set tasks and supervise their implementation. I have a knack for solving problems in unconventional ways.
+          In addition to my main job, I am actively interested in various blockchain and web3 projects.<br>
+          <br>
+          At the moment, I decided to change my career direction and become a web developer.<br>
+          <br>
+          I'm looking for a position that can work remotely or with the option to relocate.<br>
+          <br>
+          <span class="bold-text">My current skills:</span> HTML, CSS, JS, GIT, Github
+        </p>
+      </div>
     </section>
     <section id="projects">
-      <a>Project №1</a>
-      <section class="project-tile">
-      </section>
+      <h2>Some things I’ve built</h2>
+      <div class="project-one">
+        <div class="div-img">
+          <img
+        class="project-image"
+        src="images/Trombones.png"
+        alt="project">
+        </div>
+        <div class="project-description">
+          <p>
+            <span class="bold-text">Product landing page</span><br>
+            
+            This product landing page was created as part of a task on the Freecodecamp course.<br>
+            The design of the page was takken from <a href="https://product-landing-page.freecodecamp.rocks/" target=_blank>here</a><br>
+            <a href="https://alexanderel783.github.io/Trombones_LP/" target=_blank id="profile-link">Visit page</a>
+          <p>
+          <a href="https://github.com/AlexanderEl783/Trombones_LP" target=_blank class="link" title="GitHub"><i class="fa fa-github fa-2x"></i></a>
+        </div>
+      </div>
+      <div class="project-one">
+        <div class="div-img">
+          <img
+        class="project-image"
+        src="images/comming_soon.jpg"
+        alt="project">
+        </div>
+        <div class="project-description">
+          <p>
+            This project comming soon<br>
+          <p>
+        </div>
+      </div>
     </section>
-    <footer>
-        <p>Footer</p>
-    </footer>
-  </body>
+  </main>
+  <footer>
+ 
+  </footer>
+</body>
