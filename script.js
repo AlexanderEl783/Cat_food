@@ -4,10 +4,11 @@ const products = [
         id: 1,
         title: "Сказочное заморское явство",
         brand: "Нямушка",
-        ingredient: "с фуа-гр",
+        ingredient: "с фуа-гра",
         promo: "10 порций<br>мышь в подарок",
         weight: "0,5",
-        available: 0,
+        description: "Печень утки разварная с артишоками.",
+        available: 1,
     },
     {
         id: 2,
@@ -16,7 +17,8 @@ const products = [
         ingredient: "с рыбой",
         promo: "40 порций<br>2 мыши в подарок",
         weight: "2",
-        available: 4,
+        description: "Головы щучьи с чесноком да свежайшая сёмгушка.",
+        available: 2,
     },
     {
         id: 3,
@@ -25,30 +27,14 @@ const products = [
         ingredient: "с курой",
         promo: "100 порций<br>5 мышей в подарок<br>заказчик доволен",
         weight: "5",
-        available: 1,
-    },
-    {
-        id: 3,
-        title: "Сказочное заморское явство",
-        brand: "Нямушка",
-        ingredient: "с курой",
-        promo: "100 порций<br>5 мышей в подарок<br>заказчик доволен",
-        weight: "5",
+        description: "Филе из цыплят с трюфелями в бульоне.",
         available: 0,
-    },
-    {
-        id: 3,
-        title: "Сказочное заморское явство",
-        brand: "Нямушка",
-        ingredient: "с курой",
-        promo: "100 порций<br>5 мышей в подарок<br>заказчик доволен",
-        weight: "5",
-        available: 1,
     },
 ];
 
 const content = document.querySelector('.content');
-const itemPoster = document.querySelectorAll('.content-item-poster');
+const itemPoster = document.querySelector('.content-item-poster');
+const contentItem = document.querySelector('.content-item')
 
 window.addEventListener('DOMContentLoaded', function () {
     displayProducts(products);
@@ -58,7 +44,8 @@ function displayProducts(listItems) {
     let displayProductItem = listItems.map(function (item) {
 
         if (item.available > 0) {
-            return ` <div class="content-item">
+
+            return `<div class="content-item">
             <div class="content-item-poster">
             <img src="./images/Cat.png" alt="CatIMG">
             <div class="content-item-poster-titles">
@@ -81,7 +68,7 @@ function displayProducts(listItems) {
         }
 
         else {
-            return ` <div class="content-item">
+            return `<div class="content-item">
             <div class="content-item-poster filter-disabled">
             <img src="./images/Cat.png" alt="CatIMG">
             <div class="content-item-poster-titles">
@@ -106,21 +93,9 @@ function displayProducts(listItems) {
     });
     displayProductItem = displayProductItem.join("");
     content.innerHTML = displayProductItem;
-
-    available();
-
 }
 
-available = () => {
-    for (let item of products) {
-        if (item.available > 0) {
-            console.log('yes')
-        }
-        else {
-            console.log('no')
 
 
-        }
 
-    }
-}
+
